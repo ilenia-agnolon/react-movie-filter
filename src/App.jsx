@@ -31,7 +31,7 @@ function App() {
           {/* Seleziona un genere */}
           <div className="mb-3">
             <label htmlFor="genreSelect" className="form-label">
-              Seleziona il genere che vuoi
+              Seleziona il genere
             </label>
             <select
               id="genreSelect"
@@ -53,11 +53,14 @@ function App() {
 
         {/* spazio lista film */}
         <div>
-          <ul>
+          <ul className="list-group">
             {/* film */}
             {filteredMovies.map((movie, index) => (
-              <li key={index}>
-                {movie.title} &minus; {movie.genre}
+              <li
+                className="list-group-item p-3 mb-2 bg-black text-white"
+                key={index}
+              >
+                <strong>{movie.title}</strong> &minus; {movie.genre}
               </li>
             ))}
           </ul>
