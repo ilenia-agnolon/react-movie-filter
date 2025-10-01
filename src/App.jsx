@@ -26,9 +26,9 @@ function App() {
       <main>
         <h1>React Movie Filter</h1>
 
-        {/* labels */}
+        {/* spazio label */}
         <div>
-          {/* 1. Seleziona un genere */}
+          {/* Seleziona un genere */}
           <div className="mb-3">
             <label htmlFor="genreSelect" className="form-label">
               Seleziona il genere che vuoi
@@ -51,9 +51,10 @@ function App() {
           </div>
         </div>
 
-        {/* film */}
+        {/* spazio lista film */}
         <div>
           <ul>
+            {/* film */}
             {filteredMovies.map((movie, index) => (
               <li key={index}>
                 {movie.title} &minus; {movie.genre}
