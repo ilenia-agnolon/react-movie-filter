@@ -11,7 +11,15 @@ function App() {
   //lista che viene mostrata
   const [filteredMovies, setFilteredMovies] = useState(movies);
 
-  const genres = [];
+  useEffect(() => {
+    if (selectedGenre === "") {
+      setFilteredMovies(movies);
+    } else {
+      setFilteredMovies(
+        movies.filter((movie) => movie.genre === selectedGenre)
+      );
+    } // → se l'utente ha scelto l'opzione vuota rimettiamo dentro filteredMovies l'intero array movies, altrimenti si filtra l'array, tenendo solo i film il cui genre corrisponde a quello nella select. Infine setFilteredMovies aggiorna lo stato
+  }, [selectedGenre]); // → questo effetto si ri-esegue solo quando cambia il genere selezionato
 
   return (
     <>
