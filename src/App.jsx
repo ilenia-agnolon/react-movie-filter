@@ -19,12 +19,19 @@ function App() {
         {/* labels */}
         <div>
           {/* 1. Seleziona un genere */}
-          <div class="mb-3">
-            <label for="disabledSelect" class="form-label">
+          <div className="mb-3">
+            <label for="genreSelect" className="form-label">
               Seleziona il genere che vuoi
             </label>
-            <select id="disabledSelect" class="form-select">
-              <option>Seleziona un genere</option>
+            <select
+              id="genreSelect"
+              className="form-select"
+              value={selectedGenre}
+              onChange={(e) => {
+                setSelectedGenre(e.target.value);
+              }}
+            >
+              {/* <option>Seleziona un genere</option> */}
             </select>
           </div>
         </div>
