@@ -1,4 +1,4 @@
-[
+const movies = [
   { title: "Inception", genre: "Fantascienza" },
   { title: "Il Padrino", genre: "Thriller" },
   { title: "Titanic", genre: "Romantico" },
@@ -6,3 +6,5 @@
   { title: "Interstellar", genre: "Fantascienza" },
   { title: "Pulp Fiction", genre: "Thriller" },
 ];
+
+export default movies;
