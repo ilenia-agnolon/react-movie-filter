@@ -11,6 +11,8 @@ function App() {
   //lista che viene mostrata
   const [filteredMovies, setFilteredMovies] = useState(movies);
 
+  const genres = [];
+
   return (
     <>
       <main>
@@ -31,7 +33,12 @@ function App() {
                 setSelectedGenre(e.target.value);
               }}
             >
-              {/* <option>Seleziona un genere</option> */}
+              {/* opzioni disponibili */}
+              <option value="">-</option>
+              <option value="Fantascienza">Fantascienza</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Romantico">Romantico</option>
+              <option value="Azione">Azione</option>
             </select>
           </div>
         </div>
