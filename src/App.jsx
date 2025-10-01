@@ -30,7 +30,7 @@ function App() {
         <div>
           {/* 1. Seleziona un genere */}
           <div className="mb-3">
-            <label for="genreSelect" className="form-label">
+            <label htmlFor="genreSelect" className="form-label">
               Seleziona il genere che vuoi
             </label>
             <select
